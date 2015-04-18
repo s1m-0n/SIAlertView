@@ -1210,8 +1210,3 @@ static SIAlertView *__si_alert_current_view;
 #endif
 
 @end
-
-    Status API Training Shop Blog About 
-
-    © 2015 GitHub, Inc. Terms Privacy Security Contact 
-
