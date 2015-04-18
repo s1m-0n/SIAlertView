@@ -1,37 +1,3 @@
-
-Skip to content
-This repository
-
-    Explore
-    Gist
-    Blog
-    Help
-
-    @s1m-0n s1m-0n
-
-4
-1
-
-    335
-
-JoistApp/SIAlertView forked from Sumi-Interactive/SIAlertView
-
-SIAlertView/SIAlertView/SIAlertView.m
-@BobReid BobReid on 23 Sep 2014 Fixed window rotation on iOS 8 by converting the frame to the fixed c…
-
-11 contributors
-@kyoji2
-@reekris
-@5D
-@mfkp
-@ricsantos
-@peterwilli
-@mrcrow
-@edwardmp
-@BobReid
-@alexanderedge
-@aporat
-1213 lines (1048 sloc) 41.229 kb
 //
 //  SIAlertView.m
 //  SIAlertView
