@@ -91,6 +91,7 @@ static SIAlertView *__si_alert_current_view;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.opaque = NO;
         self.windowLevel = UIWindowLevelSIAlertBackground;
+        self.rootViewController = [UIViewController new];
     }
     return self;
 }
@@ -300,10 +301,7 @@ static SIAlertView *__si_alert_current_view;
 {
     if (!__si_alert_background_window) {
         
-        CGRect frame = [[UIScreen mainScreen] bounds];
-        
-        __si_alert_background_window = [[SIAlertBackgroundWindow alloc] initWithFrame:frame
-                                                                             andStyle:[SIAlertView currentAlertView].backgroundStyle];
+        __si_alert_background_window = [[SIAlertBackgroundWindow alloc] initWithFrame:[UIScreen mainScreen].bounds andStyle:[SIAlertView currentAlertView].backgroundStyle];
         [__si_alert_background_window makeKeyAndVisible];
         __si_alert_background_window.alpha = 0;
         [UIView animateWithDuration:0.3
@@ -808,7 +806,7 @@ static SIAlertView *__si_alert_current_view;
             NSDictionary *attributes = @{NSFontAttributeName:self.titleLabel.font,
                                          NSParagraphStyleAttributeName: paragraphStyle.copy};
             
-            // NSString class method: boundingRectWithSize:options:attributes:context is
+            // NSString class method: boundingRectWithSize:optshions:attributes:context is
             // available only on ios7.0 sdk.
             CGRect rect = [self.titleLabel.text boundingRectWithSize:CGSizeMake(CONTAINER_WIDTH - CONTENT_PADDING_LEFT * 2, CGFLOAT_MAX)
                                                              options:NSStringDrawingUsesLineFragmentOrigin
